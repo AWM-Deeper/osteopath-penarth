@@ -1,0 +1,2196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langdon Osteopathy | Expert Osteopathic Care in Penarth & Barry</title>
+    <meta name="description" content="Expert osteopathic care in Penarth and Barry, Wales. David Langdon BSc (Hons) offers osteopathy, sports injury treatment, acupuncture, and rehabilitation. Book today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet">
+    <style>
+        /* ========== CSS VARIABLES ========== */
+        :root {
+            --cream: #F5F0EB;
+            --warm-white: #FAF8F5;
+            --slate: #2D3436;
+            --terracotta: #C4956A;
+            --terracotta-light: #D4A97A;
+            --sage: #8B9E8B;
+            --sage-light: #A3B5A3;
+            --olive: #6B7B5E;
+            --bone: #EDE8E1;
+            --brand-blue: #3472A4;
+            --brand-grey: #8E8E8E;
+            --text-primary: #2D3436;
+            --text-secondary: #5A6267;
+            --text-light: #7A8287;
+            --shadow-sm: 0 2px 8px rgba(45,52,54,0.06);
+            --shadow-md: 0 8px 32px rgba(45,52,54,0.08);
+            --shadow-lg: 0 16px 48px rgba(45,52,54,0.12);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'DM Serif Display', Georgia, serif;
+            --font-body: 'Nunito Sans', 'Segoe UI', sans-serif;
+        }
+
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background-color: var(--warm-white);
+            line-height: 1.7;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        /* Grain texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            background-repeat: repeat;
+            background-size: 256px 256px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== SCROLL REVEAL ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+        .reveal-delay-5 { transition-delay: 0.5s; }
+        .reveal-delay-6 { transition-delay: 0.6s; }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: all var(--transition);
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background-color: var(--terracotta);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(196,149,106,0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--terracotta-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(196,149,106,0.4);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--slate);
+            border: 2px solid var(--bone);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--terracotta);
+            color: var(--terracotta);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline-light {
+            background-color: transparent;
+            color: var(--warm-white);
+            border: 2px solid rgba(245,240,235,0.4);
+        }
+
+        .btn-outline-light:hover {
+            background-color: rgba(245,240,235,0.1);
+            border-color: rgba(245,240,235,0.7);
+            transform: translateY(-2px);
+        }
+
+        /* ========== SECTION STYLES ========== */
+        .section-label {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            color: var(--slate);
+            margin-bottom: 20px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        /* ========== HEADER / NAVIGATION ========== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            transition: all 0.4s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(250,248,245,0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(237,232,225,0.6);
+            padding: 10px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-shrink: 0;
+        }
+
+        .header-logo img {
+            height: 42px;
+            width: auto;
+        }
+
+        .nav-desktop {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-desktop a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .nav-desktop a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--terracotta);
+            transition: width var(--transition);
+            border-radius: 2px;
+        }
+
+        .nav-desktop a:hover,
+        .nav-desktop a.active {
+            color: var(--slate);
+        }
+
+        .nav-desktop a:hover::after,
+        .nav-desktop a.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-cta .btn {
+            padding: 10px 24px;
+            font-size: 0.85rem;
+        }
+
+        .store-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .store-link:hover {
+            color: var(--terracotta);
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1002;
+            background: none;
+            border: none;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: var(--slate);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -6px);
+        }
+
+        /* Mobile Nav Overlay */
+        .nav-mobile {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(250,248,245,0.97);
+            backdrop-filter: blur(20px);
+            z-index: 1001;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-mobile.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .nav-mobile a {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            color: var(--slate);
+            transition: color var(--transition);
+        }
+
+        .nav-mobile a:hover {
+            color: var(--terracotta);
+        }
+
+        .nav-mobile .btn {
+            margin-top: 16px;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(160deg, var(--cream) 0%, var(--warm-white) 40%, #E8E3DC 100%);
+            overflow: hidden;
+            padding: 120px 24px 80px;
+        }
+
+        /* Organic blob shapes */
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .hero-blob-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--sage);
+            top: -150px;
+            right: -100px;
+            opacity: 0.15;
+        }
+
+        .hero-blob-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--terracotta);
+            bottom: -100px;
+            left: -100px;
+            opacity: 0.1;
+        }
+
+        .hero-blob-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--brand-blue);
+            top: 40%;
+            left: 60%;
+            opacity: 0.06;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 780px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139,158,139,0.12);
+            border: 1px solid rgba(139,158,139,0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: var(--olive);
+            margin-bottom: 32px;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.3s forwards;
+        }
+
+        .hero-badge-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--sage);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+            color: var(--slate);
+            margin-bottom: 24px;
+            line-height: 1.1;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.5s forwards;
+        }
+
+        .hero h1 em {
+            font-style: italic;
+            color: var(--terracotta);
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.7s forwards;
+        }
+
+        .hero-ctas {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: fadeInUp 0.8s 0.9s forwards;
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 0;
+            animation: fadeInUp 0.8s 1.2s forwards;
+        }
+
+        .hero-scroll-indicator span {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-light);
+        }
+
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--terracotta), transparent);
+            animation: scrollPulse 2s infinite;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* ========== ABOUT ========== */
+        .about {
+            background: var(--warm-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 64px;
+            align-items: start;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: -16px;
+            right: 16px;
+            bottom: 16px;
+            background: var(--sage);
+            opacity: 0.12;
+            border-radius: var(--radius-lg);
+            z-index: 0;
+        }
+
+        .about-image {
+            position: relative;
+            z-index: 1;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image img {
+            width: 100%;
+            aspect-ratio: 4 / 5;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .about-content h2 {
+            margin-bottom: 8px;
+        }
+
+        .about-content .name-subtitle {
+            font-size: 1rem;
+            color: var(--terracotta);
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+
+        .about-text p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: 0.98rem;
+            line-height: 1.85;
+        }
+
+        .credential-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 32px;
+        }
+
+        .credential-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--cream);
+            border: 1px solid var(--bone);
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+            transition: all var(--transition);
+        }
+
+        .credential-badge:hover {
+            border-color: var(--terracotta);
+            color: var(--terracotta);
+            transform: translateY(-1px);
+        }
+
+        .credential-badge svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--sage);
+        }
+
+        /* ========== TREATMENTS ========== */
+        .treatments {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .treatments::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--bone), transparent);
+        }
+
+        .treatments-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .treatments-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .treatments-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .treatment-card {
+            background: var(--warm-white);
+            border-radius: var(--radius-md);
+            padding: 36px 28px;
+            transition: all var(--transition);
+            border: 1px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .treatment-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--terracotta), var(--sage));
+            opacity: 0;
+            transition: opacity var(--transition);
+        }
+
+        .treatment-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--bone);
+        }
+
+        .treatment-card:hover::before {
+            opacity: 1;
+        }
+
+        .treatment-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, rgba(139,158,139,0.12), rgba(196,149,106,0.08));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .treatment-card h3 {
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--slate);
+        }
+
+        .treatment-card p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+        }
+
+        /* ========== PRICING ========== */
+        .pricing {
+            background: var(--warm-white);
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .pricing-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .pricing-card {
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            padding: 40px 48px;
+            text-align: center;
+            min-width: 280px;
+            flex: 0 1 340px;
+            border: 1px solid var(--bone);
+            transition: all var(--transition);
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .pricing-card.featured {
+            background: var(--slate);
+            color: var(--warm-white);
+            border-color: var(--slate);
+        }
+
+        .pricing-card.featured .pricing-type {
+            color: var(--terracotta-light);
+        }
+
+        .pricing-card.featured .pricing-desc {
+            color: rgba(245,240,235,0.7);
+        }
+
+        .pricing-type {
+            font-family: var(--font-body);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 12px;
+        }
+
+        .pricing-amount {
+            font-family: var(--font-heading);
+            font-size: 3.2rem;
+            margin-bottom: 8px;
+        }
+
+        .pricing-desc {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .pricing-card.featured .btn-primary {
+            background: var(--terracotta);
+            color: #fff;
+        }
+
+        /* ========== HOW IT WORKS ========== */
+        .how-it-works {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .how-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .how-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            position: relative;
+        }
+
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: calc(16.67% + 20px);
+            right: calc(16.67% + 20px);
+            height: 2px;
+            background: linear-gradient(90deg, var(--terracotta), var(--sage), var(--brand-blue));
+            opacity: 0.25;
+        }
+
+        .step-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--warm-white);
+            border: 2px solid var(--bone);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            color: var(--terracotta);
+            position: relative;
+            z-index: 2;
+            transition: all var(--transition);
+        }
+
+        .step-item:hover .step-number {
+            border-color: var(--terracotta);
+            box-shadow: 0 4px 20px rgba(196,149,106,0.2);
+            transform: translateY(-2px);
+        }
+
+        .step-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--slate);
+        }
+
+        .step-item p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.75;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        /* ========== TESTIMONIALS ========== */
+        .testimonials {
+            background: var(--slate);
+            color: var(--warm-white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: var(--terracotta);
+            opacity: 0.04;
+            top: -200px;
+            right: -200px;
+            filter: blur(100px);
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .testimonials-header .section-label {
+            color: var(--terracotta-light);
+        }
+
+        .testimonials-header .section-title {
+            color: var(--warm-white);
+        }
+
+        .testimonials-header .section-subtitle {
+            color: rgba(245,240,235,0.6);
+            margin: 0 auto;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: rgba(245,240,235,0.06);
+            border: 1px solid rgba(245,240,235,0.08);
+            border-radius: var(--radius-md);
+            padding: 32px 28px;
+            transition: all var(--transition);
+        }
+
+        .testimonial-card:hover {
+            background: rgba(245,240,235,0.09);
+            border-color: rgba(245,240,235,0.12);
+            transform: translateY(-3px);
+        }
+
+        .testimonial-quote {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: rgba(245,240,235,0.85);
+            margin-bottom: 24px;
+            position: relative;
+            padding-top: 20px;
+        }
+
+        .testimonial-quote::before {
+            content: '\201C';
+            position: absolute;
+            top: -8px;
+            left: 0;
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--terracotta);
+            opacity: 0.5;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--terracotta), var(--sage));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+            color: #fff;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--warm-white);
+        }
+
+        .testimonial-role {
+            font-size: 0.8rem;
+            color: rgba(245,240,235,0.5);
+        }
+
+        .testimonials-grid .testimonial-card:nth-child(4),
+        .testimonials-grid .testimonial-card:nth-child(5) {
+            grid-column: auto;
+        }
+
+        .testimonials-bottom-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-top: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ========== FAQ ========== */
+        .faq {
+            background: var(--warm-white);
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .faq-list {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--bone);
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            color: var(--slate);
+            transition: color var(--transition);
+            gap: 16px;
+        }
+
+        .faq-question:hover {
+            color: var(--terracotta);
+        }
+
+        .faq-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1.5px solid var(--bone);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all var(--transition);
+        }
+
+        .faq-icon svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--text-secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            background: var(--terracotta);
+            border-color: var(--terracotta);
+        }
+
+        .faq-item.open .faq-icon svg {
+            stroke: #fff;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding-bottom: 24px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        /* ========== CONTACT ========== */
+        .contact {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .contact-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .location-card {
+            background: var(--warm-white);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            border: 1px solid var(--bone);
+            transition: all var(--transition);
+        }
+
+        .location-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .location-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: var(--radius-sm);
+            background: linear-gradient(135deg, rgba(139,158,139,0.15), rgba(196,149,106,0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .location-card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: var(--slate);
+        }
+
+        .location-card .location-venue {
+            font-weight: 600;
+            color: var(--terracotta);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+
+        .location-card .location-address {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .contact-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .contact-detail-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--warm-white);
+            border: 1px solid var(--bone);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .contact-detail-icon svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--terracotta);
+            fill: none;
+            stroke-width: 2;
+        }
+
+        .contact-detail-text {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-detail-text strong {
+            display: block;
+            color: var(--slate);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            margin-bottom: 2px;
+        }
+
+        .contact-detail-text a {
+            color: var(--terracotta);
+        }
+
+        .contact-detail-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Contact Form */
+        .contact-form-wrapper {
+            max-width: 640px;
+            margin: 0 auto;
+            background: var(--warm-white);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            border: 1px solid var(--bone);
+        }
+
+        .contact-form-title {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 32px;
+            color: var(--slate);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            border: 1.5px solid var(--bone);
+            border-radius: var(--radius-sm);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--slate);
+            background: var(--cream);
+            transition: all var(--transition);
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--terracotta);
+            box-shadow: 0 0 0 3px rgba(196,149,106,0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+        .form-submit .btn {
+            min-width: 200px;
+            justify-content: center;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: var(--slate);
+            color: rgba(245,240,235,0.7);
+            padding: 64px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(245,240,235,0.08);
+        }
+
+        .footer-brand .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand .footer-logo img {
+            height: 38px;
+            width: auto;
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+        }
+
+        .footer-brand p {
+            font-size: 0.88rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .footer-registration {
+            font-size: 0.8rem;
+            line-height: 1.7;
+            opacity: 0.6;
+        }
+
+        .footer-col h4 {
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--warm-white);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            font-size: 0.88rem;
+            color: rgba(245,240,235,0.6);
+            transition: color var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--terracotta-light);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 4px;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 1px solid rgba(245,240,235,0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            border-color: var(--terracotta-light);
+            background: rgba(196,149,106,0.1);
+        }
+
+        .footer-social a svg {
+            width: 16px;
+            height: 16px;
+            fill: rgba(245,240,235,0.6);
+        }
+
+        .footer-insurance {
+            margin-top: 16px;
+        }
+
+        .footer-insurance span {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.5;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 600;
+        }
+
+        .footer-insurance p {
+            font-size: 0.85rem;
+        }
+
+        .footer-bottom {
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.82rem;
+            opacity: 0.5;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .about-image-wrapper {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .treatments-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid .testimonial-card:last-child {
+                grid-column: 1 / -1;
+                max-width: 400px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .testimonials-bottom-row {
+                grid-template-columns: 1fr;
+                max-width: 500px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-desktop,
+            .nav-cta .store-link {
+                display: none;
+            }
+
+            .nav-cta .btn {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-mobile {
+                display: flex;
+            }
+
+            section {
+                padding: 72px 0;
+            }
+
+            .hero {
+                padding: 100px 20px 60px;
+                min-height: 100svh;
+            }
+
+            .hero h1 {
+                font-size: clamp(2rem, 8vw, 2.8rem);
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .about-image-wrapper {
+                max-width: 320px;
+            }
+
+            .treatments-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .steps-container::before {
+                display: none;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid .testimonial-card:last-child {
+                max-width: none;
+            }
+
+            .testimonials-bottom-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-details {
+                flex-direction: column;
+                align-items: center;
+                gap: 24px;
+            }
+
+            .contact-form-wrapper {
+                padding: 32px 24px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pricing-card {
+                width: 100%;
+                max-width: 380px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-scroll-indicator {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-ctas {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-ctas .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .credential-badges {
+                gap: 8px;
+            }
+
+            .credential-badge {
+                font-size: 0.72rem;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a href="#" class="header-logo" aria-label="Langdon Osteopathy Home">
+                <img src="./assets/small-logo.jpg" alt="Langdon Osteopathy Logo">
+            </a>
+            <nav class="nav-desktop" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#treatments">Treatments</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#testimonials">Testimonials</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="#" class="store-link" target="_blank" rel="noopener noreferrer">Store</a>
+                <a href="#contact" class="btn btn-primary">Book Now</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="nav-mobile" id="navMobile">
+        <a href="#about" class="nav-mobile-link">About</a>
+        <a href="#treatments" class="nav-mobile-link">Treatments</a>
+        <a href="#how-it-works" class="nav-mobile-link">How It Works</a>
+        <a href="#testimonials" class="nav-mobile-link">Testimonials</a>
+        <a href="#faq" class="nav-mobile-link">FAQ</a>
+        <a href="#contact" class="nav-mobile-link">Contact</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="nav-mobile-link">Store</a>
+        <a href="#contact" class="btn btn-primary">Book Now</a>
+    </div>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="hero-badge-dot"></span>
+                GOsC Registered Osteopath — Penarth &amp; Barry
+            </div>
+            <h1>Move Without Pain.<br><em>Live Without Limits.</em></h1>
+            <p class="hero-subtitle">Expert osteopathic care in Penarth. Combining hands-on treatment with rehabilitation expertise to help you move, perform and feel your best.</p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary">Book an Appointment</a>
+                <a href="#about" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image-wrapper reveal">
+                    <div class="about-image">
+                        <img src="./assets/david-langdon.jpg" alt="David Langdon — Osteopath" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="reveal">
+                        <span class="section-label">About Your Osteopath</span>
+                        <h2 class="section-title">David Langdon</h2>
+                        <p class="name-subtitle">BSc (Hons) Osteopathy — GOsC Registered</p>
+                    </div>
+                    <div class="about-text reveal reveal-delay-1">
+                        <p>David moved back to Wales in 2019 after living in London for 30 years, and now practises in Penarth from Old Penarthians RFC and at The Vale Foot Clinic on High Street, Barry.</p>
+                        <p>After spending 20 years as a Medical Photographer working in hospitals around the UK — including 10 years at King's College Hospital — he retrained as an Osteopath at the London School of Osteopathy, graduating in 2008 with a BSc (Hons) in Osteopathy. He then opened his own clinic and gym, Langdon Osteopathy, near London's Canary Wharf, which he ran until moving to Penarth.</p>
+                        <p>David is also qualified as an Active Release Technique (Spine) therapist, a western acupuncture practitioner, qualified in Kinesio Taping, food intolerance testing, and is a Poliquin Certified Personal Trainer and Kinetic Link Training (KLT) instructor.</p>
+                    </div>
+                    <div class="about-text reveal reveal-delay-2">
+                        <p>David's main interest outside osteopathy is sport, especially rugby union. He played at London Welsh from 1992 to 2010, retiring through injury at 44. He has served as Head of Therapy at Old Priorian RFC (9 seasons) and London Welsh RFC (4 seasons), providing osteopathic, rehab and match-day pitch-side services. He now works with Old Penarthians RFC as Head of Therapy.</p>
+                        <p>His personal experience recovering from injuries brought him to osteopathy, and he's passionate about treating sportspeople at all levels — from weekend warriors to professionals. But it's important to note David treats everyone who needs his services, not just athletes.</p>
+                    </div>
+                    <div class="credential-badges reveal reveal-delay-3">
+                        <span class="credential-badge">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            BSc (Hons) Osteopathy
+                        </span>
+                        <span class="credential-badge">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            GOsC Registered
+                        </span>
+                        <span class="credential-badge">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            ART Certified
+                        </span>
+                        <span class="credential-badge">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            Kinesio Taping
+                        </span>
+                        <span class="credential-badge">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            Western Acupuncture
+                        </span>
+                        <span class="credential-badge">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            Poliquin PCPT
+                        </span>
+                        <span class="credential-badge">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            KLT Instructor
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TREATMENTS ========== -->
+    <section class="treatments" id="treatments">
+        <div class="container">
+            <div class="treatments-header">
+                <span class="section-label reveal">Treatments</span>
+                <h2 class="section-title reveal reveal-delay-1">How We Can Help You</h2>
+                <p class="section-subtitle reveal reveal-delay-2">A comprehensive range of manual therapies tailored to your individual needs and goals.</p>
+            </div>
+            <div class="treatments-grid">
+                <div class="treatment-card reveal reveal-delay-1">
+                    <div class="treatment-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 18.7V3.3C18 2.6 17.4 2 16.7 2H7.3C6.6 2 6 2.6 6 3.3v15.4c0 .7.6 1.3 1.3 1.3h9.4c.7 0 1.3-.6 1.3-1.3z"/><path d="M12 6v4"/><path d="M10 8h4"/></svg>
+                    </div>
+                    <h3>Osteopathy</h3>
+                    <p>Holistic manual treatment addressing the root cause of pain. Effective for back and neck pain, postural strains, headaches, and work-related injuries.</p>
+                </div>
+                <div class="treatment-card reveal reveal-delay-2">
+                    <div class="treatment-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="3"/><path d="M12 8v4"/><path d="M8 20l2-6h4l2 6"/><path d="M6 12h12"/></svg>
+                    </div>
+                    <h3>Sports Injury &amp; Rehabilitation</h3>
+                    <p>Expert assessment and treatment of sports injuries with tailored rehabilitation programmes to get you back to full fitness and prevent recurrence.</p>
+                </div>
+                <div class="treatment-card reveal reveal-delay-3">
+                    <div class="treatment-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-5.523-4.477-10-10-10"/><circle cx="12" cy="12" r="1"/><path d="M12 2c0 5.523 4.477 10 10 10"/></svg>
+                    </div>
+                    <h3>Modern Acupuncture</h3>
+                    <p>Western acupuncture targeting trigger points in muscles to relieve pain, reduce tension and promote the body's natural healing response.</p>
+                </div>
+                <div class="treatment-card reveal reveal-delay-4">
+                    <div class="treatment-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 11V7a5 5 0 0 1 10 0v4"/><rect x="3" y="11" width="18" height="11" rx="2"/><circle cx="12" cy="16" r="1"/></svg>
+                    </div>
+                    <h3>Active Release Techniques</h3>
+                    <p>A patented soft tissue movement-based massage technique for treating problems with muscles, tendons, ligaments, fascia and nerves caused by overuse.</p>
+                </div>
+                <div class="treatment-card reveal reveal-delay-5">
+                    <div class="treatment-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                    </div>
+                    <h3>Sports &amp; Remedial Massage</h3>
+                    <p>Deep tissue manipulation to reduce pain, speed recovery, break down scar tissue and restore optimal function to muscles and soft tissues.</p>
+                </div>
+                <div class="treatment-card reveal reveal-delay-6">
+                    <div class="treatment-icon">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+                    </div>
+                    <h3>Kinesio Taping</h3>
+                    <p>Therapeutic taping technique to support injured muscles and joints while maintaining full range of movement during recovery and training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRICING ========== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <span class="section-label reveal">Pricing</span>
+                <h2 class="section-title reveal reveal-delay-1">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle reveal reveal-delay-2">No hidden costs. Insurance accepted from Aviva, Vitality, AXA (HSA) and PruHealth.</p>
+            </div>
+            <div class="pricing-cards">
+                <div class="pricing-card featured reveal reveal-delay-1">
+                    <div class="pricing-type">New Appointment</div>
+                    <div class="pricing-amount">£65</div>
+                    <p class="pricing-desc">Full consultation including case history, physical examination, diagnosis and initial treatment. Approximately 45–60 minutes.</p>
+                    <a href="#contact" class="btn btn-primary">Book Now</a>
+                </div>
+                <div class="pricing-card reveal reveal-delay-2">
+                    <div class="pricing-type">Follow-Up</div>
+                    <div class="pricing-amount">£55</div>
+                    <p class="pricing-desc">Continued treatment and rehabilitation. Progress review, hands-on therapy and updated exercise programme. Approximately 30–40 minutes.</p>
+                    <a href="#contact" class="btn btn-secondary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="how-header">
+                <span class="section-label reveal">How It Works</span>
+                <h2 class="section-title reveal reveal-delay-1">Your Path to Recovery</h2>
+                <p class="section-subtitle reveal reveal-delay-2">A straightforward process designed to get you feeling better, faster.</p>
+            </div>
+            <div class="steps-container">
+                <div class="step-item reveal reveal-delay-1">
+                    <div class="step-number">1</div>
+                    <h3>Book</h3>
+                    <p>Call, email or use our online booking to schedule your appointment at a time that suits you.</p>
+                </div>
+                <div class="step-item reveal reveal-delay-2">
+                    <div class="step-number">2</div>
+                    <h3>Assessment</h3>
+                    <p>A thorough case history and physical examination to understand your condition and identify the root cause.</p>
+                </div>
+                <div class="step-item reveal reveal-delay-3">
+                    <div class="step-number">3</div>
+                    <h3>Treatment Plan</h3>
+                    <p>A personalised treatment programme combining hands-on therapy with rehabilitation exercises tailored to your goals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="testimonials-header">
+                <span class="section-label reveal">Testimonials</span>
+                <h2 class="section-title reveal reveal-delay-1">What Our Patients Say</h2>
+                <p class="section-subtitle reveal reveal-delay-2">Real feedback from real patients.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="testimonial-quote">David's knowledge and rehab abilities ensured a prompt return to fitness and massive relief from pain following a rugby injury to my Achilles tendon.</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">G</div>
+                        <div>
+                            <div class="testimonial-name">Geraint</div>
+                            <div class="testimonial-role">Patient</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="testimonial-quote">The relaxed atmosphere and expert knowledge makes treatment so much less daunting. David has helped me with long-term joint problems and acute sciatica.</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">L</div>
+                        <div>
+                            <div class="testimonial-name">Liz</div>
+                            <div class="testimonial-role">Patient</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-3">
+                    <div class="testimonial-quote">Top-class service. David cured my aches, strains and back pain, and provided stretching and postural work while I was training for an Ironman.</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">B</div>
+                        <div>
+                            <div class="testimonial-name">Brian</div>
+                            <div class="testimonial-role">Patient</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-bottom-row">
+                <div class="testimonial-card reveal reveal-delay-4">
+                    <div class="testimonial-quote">David works proactively with my personal trainer to prevent problems. I've been relatively injury-free for the last three years thanks to his approach.</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">J</div>
+                        <div>
+                            <div class="testimonial-name">Jeremy</div>
+                            <div class="testimonial-role">Patient</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal reveal-delay-5">
+                    <div class="testimonial-quote">Expert service that significantly reduced my time spent on the sidelines spectating rather than playing.</div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">I</div>
+                        <div>
+                            <div class="testimonial-name">Ian</div>
+                            <div class="testimonial-role">Patient</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq-header">
+                <span class="section-label reveal">FAQ</span>
+                <h2 class="section-title reveal reveal-delay-1">Frequently Asked Questions</h2>
+                <p class="section-subtitle reveal reveal-delay-2">Everything you need to know before your visit.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item reveal">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What should I expect on my first visit?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Your first appointment (£65) lasts approximately 45–60 minutes. David will take a detailed case history, perform a thorough physical examination, explain his findings, and begin treatment. You'll receive advice on exercises and self-care.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-1">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Is osteopathy safe?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Yes. Osteopaths undergo extensive training and are regulated by the General Osteopathic Council (GOsC). David will always explain the treatment plan and any risks before proceeding.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-2">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Do I need a GP referral?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">No referral is needed. You can book directly. However, if you have private health insurance (Aviva, Vitality, AXA/HSA, PruHealth), check your policy as some require a GP referral for reimbursement.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-3">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>What should I wear?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">Wear comfortable, loose-fitting clothing. You may be asked to undress to your underwear for examination, but this will always be handled with sensitivity and professionalism.</div>
+                    </div>
+                </div>
+                <div class="faq-item reveal reveal-delay-4">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Where are you located?</span>
+                        <span class="faq-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">David works from two locations: Old Penarthians RFC, St Marks Rd, Penarth CF64 3PF, and The Vale Foot Clinic, 90 High Street, Barry CF62 7DY.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-header">
+                <span class="section-label reveal">Contact &amp; Booking</span>
+                <h2 class="section-title reveal reveal-delay-1">Get in Touch</h2>
+                <p class="section-subtitle reveal reveal-delay-2">Ready to start your journey to better health? Book an appointment or send us a message.</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="location-card reveal reveal-delay-1">
+                    <div class="location-icon">📍</div>
+                    <h3>Penarth</h3>
+                    <p class="location-venue">Old Penarthians RFC</p>
+                    <p class="location-address">St Marks Rd, Penarth<br>CF64 3PF</p>
+                </div>
+                <div class="location-card reveal reveal-delay-2">
+                    <div class="location-icon">📍</div>
+                    <h3>Barry</h3>
+                    <p class="location-venue">The Vale Foot Clinic</p>
+                    <p class="location-address">90 High Street, Barry<br>CF62 7DY</p>
+                </div>
+            </div>
+
+            <div class="contact-details reveal reveal-delay-2">
+                <div class="contact-detail-item">
+                    <div class="contact-detail-icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div class="contact-detail-text">
+                        <strong>Phone</strong>
+                        <a href="tel:07841919334">07841 919 334</a>
+                    </div>
+                </div>
+                <div class="contact-detail-item">
+                    <div class="contact-detail-icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <div class="contact-detail-text">
+                        <strong>Email</strong>
+                        <a href="mailto:info@osteopathpenarth.com">info@osteopathpenarth.com</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper reveal reveal-delay-3">
+                <h3 class="contact-form-title">Send Us a Message</h3>
+                <form class="form-grid" onsubmit="event.preventDefault(); this.querySelector('.form-submit .btn').textContent='Message Sent!'; this.querySelector('.form-submit .btn').style.background='var(--sage)';">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="07xxx xxx xxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="New appointment, follow-up, etc.">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us about your condition or how we can help..." required></textarea>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="./assets/small-logo.jpg" alt="Langdon Osteopathy">
+                    </div>
+                    <p>Expert osteopathic care in Penarth and Barry, Wales. Helping you move, perform and feel your best.</p>
+                    <div class="footer-registration">
+                        Registered with the General Osteopathic Council (GOsC) in accordance with the Osteopaths Act 1993.<br>
+                        Member of the British Osteopathic Association.
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#treatments">Treatments</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Treatments</h4>
+                    <ul>
+                        <li><a href="#treatments">Osteopathy</a></li>
+                        <li><a href="#treatments">Sports Injury</a></li>
+                        <li><a href="#treatments">Acupuncture</a></li>
+                        <li><a href="#treatments">Active Release</a></li>
+                        <li><a href="#treatments">Sports Massage</a></li>
+                        <li><a href="#treatments">Kinesio Taping</a></li>
+                        <li><a href="#" target="_blank" rel="noopener noreferrer">Store</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="tel:07841919334">07841 919 334</a></li>
+                        <li><a href="mailto:info@osteopathpenarth.com">info@osteopathpenarth.com</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://twitter.com/Langdonosteo" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                    <div class="footer-insurance">
+                        <span>Insurance Accepted</span>
+                        <p>Aviva · Vitality · AXA (HSA) · PruHealth</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Langdon Osteopathy. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+        // ===== Header scroll effect =====
+        const header = document.getElementById('header');
+        let lastScrollY = 0;
+
+        function handleScroll() {
+            const scrollY = window.scrollY;
+            if (scrollY > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            lastScrollY = scrollY;
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+
+        // ===== Mobile menu =====
+        const hamburger = document.getElementById('hamburger');
+        const navMobile = document.getElementById('navMobile');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMobile.classList.toggle('open');
+            document.body.style.overflow = navMobile.classList.contains('open') ? 'hidden' : '';
+            hamburger.setAttribute('aria-expanded', navMobile.classList.contains('open'));
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMobile.classList.remove('open');
+                document.body.style.overflow = '';
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // ===== Active nav state =====
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-desktop a');
+
+        function updateActiveNav() {
+            const scrollPos = window.scrollY + 120;
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                if (scrollPos >= top && scrollPos < top + height) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+        // ===== Scroll reveal with IntersectionObserver =====
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ===== FAQ Accordion =====
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+            const inner = item.querySelector('.faq-answer-inner');
+
+            question.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+
+                // Close all others
+                faqItems.forEach(other => {
+                    if (other !== item) {
+                        other.classList.remove('open');
+                        other.querySelector('.faq-answer').style.maxHeight = '0';
+                        other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Toggle current
+                if (isOpen) {
+                    item.classList.remove('open');
+                    answer.style.maxHeight = '0';
+                    question.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('open');
+                    answer.style.maxHeight = inner.scrollHeight + 24 + 'px';
+                    question.setAttribute('aria-expanded', 'true');
+                }
+            });
+        });
+
+        // ===== Smooth scroll for anchor links =====
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
