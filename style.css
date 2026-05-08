@@ -1409,3 +1409,20 @@ body.booking-modal-open {
   .booking-lightbox__header { padding: 18px 56px 14px 18px; }
   .booking-lightbox__close { top: 10px; right: 10px; }
 }
+
+
+/* ========== ABOUT IMAGE STICKY ========== */
+.about-grid {
+  align-items: start;
+}
+.about-image-col {
+  position: sticky;
+  top: 96px;
+  align-self: start;
+}
+@media (max-width: 900px) {
+  .about-image-col {
+    position: static;
+    top: auto;
+  }
+}
