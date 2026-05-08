@@ -38,7 +38,7 @@
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
-          <li><a href="#contact" class="nav-link nav-cta">Book Now</a></li>
+          <li><a href="#booking" class="nav-link nav-cta" data-book-now>Book Now</a></li>
         </ul>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -61,7 +61,7 @@
       <h1 class="hero-title anim-fade-up" style="animation-delay: 0.15s;">Langdon<br>Osteopathy</h1>
       <p class="hero-tagline anim-fade-up" style="animation-delay: 0.3s;">Expert osteopathic care in Penarth &amp; Barry</p>
       <p class="hero-subtitle anim-fade-up" style="animation-delay: 0.45s;">Holistic, whole-body treatment helping you recover, rehabilitate, and thrive</p>
-      <a href="#contact" class="btn btn-primary hero-cta anim-fade-up" style="animation-delay: 0.6s;">Book an Appointment</a>
+      <a href="#booking" data-book-now class="btn btn-primary hero-cta anim-fade-up" style="animation-delay: 0.6s;">Book an Appointment</a>
     </div>
     <div class="hero-scroll-indicator anim-fade-up" style="animation-delay: 0.9s;">
       <span>Scroll</span>
@@ -171,13 +171,13 @@
           <div class="pricing-label">New Appointment</div>
           <div class="pricing-amount"><span class="currency">£</span>65</div>
           <p class="pricing-desc">Initial consultation including full case history, examination, and treatment</p>
-          <a href="#contact" class="btn btn-outline">Book Now</a>
+          <a href="#booking" data-book-now class="btn btn-outline">Book Now</a>
         </div>
         <div class="pricing-card pricing-card-featured reveal">
           <div class="pricing-label">Follow-up Appointment</div>
           <div class="pricing-amount"><span class="currency">£</span>55</div>
           <p class="pricing-desc">Ongoing treatment and progress review</p>
-          <a href="#contact" class="btn btn-primary">Book Now</a>
+          <a href="#booking" data-book-now class="btn btn-primary">Book Now</a>
         </div>
       </div>
     </div>
@@ -426,6 +426,22 @@
       </div>
     </div>
   </footer>
+
+    <!-- ========== BOOKING LIGHTBOX ========== -->
+  <div class="booking-lightbox" id="booking" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookingLightboxTitle">
+    <div class="booking-lightbox__backdrop" data-close-booking></div>
+    <div class="booking-lightbox__panel" role="document">
+      <button class="booking-lightbox__close" type="button" aria-label="Close booking window" data-close-booking>&times;</button>
+      <div class="booking-lightbox__header">
+        <p class="booking-lightbox__eyebrow">Langdon Osteopathy</p>
+        <h2 id="bookingLightboxTitle">Book your appointment</h2>
+        <p>Choose a time that works for you at the Penarth or Barry clinic.</p>
+      </div>
+      <div class="booking-lightbox__body">
+        <iframe id="cliniko-81309195" src="https://langdon-osteopathy.uk1.cliniko.com/bookings?embedded=true" frameborder="0" scrolling="auto" width="100%" height="1000" style="pointer-events: auto;" title="Book an appointment with Langdon Osteopathy"></iframe>
+      </div>
+    </div>
+  </div>
 
   <script src="./app.js"></script>
 </body>

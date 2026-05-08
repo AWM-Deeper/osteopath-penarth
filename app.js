@@ -178,3 +178,42 @@
   }
 
 })();
+
+/* ========== BOOKING LIGHTBOX ========== */
+(function () {
+  var lightbox = document.getElementById('booking');
+  if (!lightbox) return;
+  var clinikoBookings = document.getElementById('cliniko-81309195');
+  var openTriggers = document.querySelectorAll('[data-book-now]');
+  var closeTriggers = lightbox.querySelectorAll('[data-close-booking]');
+
+  function openBooking(e) {
+    if (e) e.preventDefault();
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('booking-modal-open');
+  }
+  function closeBooking() {
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('booking-modal-open');
+  }
+
+  openTriggers.forEach(function (t) { t.addEventListener('click', openBooking); });
+  closeTriggers.forEach(function (t) { t.addEventListener('click', closeBooking); });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeBooking();
+  });
+
+  window.addEventListener('message', function (e) {
+    if (typeof e.data !== 'string' || !clinikoBookings) return;
+    if (e.data.search('cliniko-bookings-resize') > -1) {
+      var height = Number(e.data.split(':')[1]);
+      clinikoBookings.style.height = height + 'px';
+    }
+    if (e.data.search('cliniko-bookings-page') > -1) {
+      clinikoBookings.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+})();
